@@ -7,11 +7,11 @@ const randomNum = Math.ceil(Math.random() * 10);
 while (GUESSES > tentative) {
     const input = parseInt(rls.question("Please enter a number between 1 and 10 "));
 
+    //JS likes to have the Number verificator with a NOT statement
     if (!Number.isInteger(input)) {
         console.log("Please enter a number, other characters are not available");
     }
     else {
-    
         if (input < 1 || input > 10) {
             console.log("Please entwer a number between 1 and 10");
         }
