@@ -1,0 +1,75 @@
+header {
+  overflow: hidden;
+  text-align: right;
+  background-color: palevioletred;
+  position: absolute;
+  /* Set the navbar to fixed position */
+  top: 0;
+  /* Position the navbar at the top of the page */
+  width: 100%;
+  /* Full width */
+  right: 0%;
+  bottom: auto;
+}
+
+header a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 8px 25px;
+  text-decoration: none;
+}
+
+h3 {
+  padding-top: 2rem;
+}
+
+article.left {
+  flex: 0 0 15%;
+  text-align: left;
+  padding-right: 1rem;;
+}
+
+article {
+  -webkit-column-count: 1;
+  -moz-column-count: 1;
+  column-count: 1;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+img {
+  font-size: 0;
+  text-align: center;
+  width: 100%;  /* Container's dimensions */
+  height: 600px;
+}
+
+li{
+  padding-top: 1rem;
+}
+
+footer {
+  width: 100%;
+  background-color: palevioletred;
+  text-align: center;
+  color: white;
+  bottom: 0;
+  right: 0;
+}
+
+h1, h2 {
+  color: palevioletred;
+  width: 100%;
+  padding-top: 0.5rem;
+}
+
+body{
+  height: 100%;
+}
+em{
+  color: palevioletred;
+}
