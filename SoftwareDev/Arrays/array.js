@@ -8,6 +8,7 @@ let teams = [3];
 
 console.log("Create the teams!");
 for (let i = 0; i < NUM_TEAMS; i++) {
+    console.log('','');
     let players = [2];
     for (let k = 0; k < NUM_PLAYERS; k++) {
         let datas = [2];
@@ -24,4 +25,4 @@ for (let i = 0; i < NUM_TEAMS; i++) {
     teams[i] = players;
 }
 
-console.log(teams[0][0][0]);
+console.log(teams);
