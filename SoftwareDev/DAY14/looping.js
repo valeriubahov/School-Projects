@@ -5,10 +5,17 @@ let stars;
 console.log('', '');
 for (let i = 1; i <= 5; i++) {
     stars = "" + i + " - ";
+    printStars();
+}
+console.log('', '');
+
+
+function printStars() {
     for (let k = 0; k < 25; k++) {
         stars += "*";
     }
     console.log(stars);
 }
-console.log('', '');
+
+
 

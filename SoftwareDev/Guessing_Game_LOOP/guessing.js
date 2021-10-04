@@ -6,15 +6,25 @@ let tentative = 0;
 let input;
 const randomNum = Math.ceil(Math.random() * 10);
 
-while (GUESSES > tentative) {
-    getGuess();
-    if (checkIfWin()) {
-        break;
+// MAIN
+do {
+    executeGame();
+}
+while (requestToPlayAgain());
+
+// RUN the main methods for the game
+function executeGame() {
+    while (GUESSES > tentative) {
+        getUserGuess();
+        if (checkIfCorrect()) {
+            break;
+        }
     }
+    tentative = 0;
 }
 
-
-function getGuess() {
+// Ask the user to guess the number
+function getUserGuess() {
     do {
         input = rls.question("Please enter a number between 1 and 10 ");
         tentative++;
@@ -22,8 +32,8 @@ function getGuess() {
     while ((isNaN(input) || (input < 1 || input > 10)) && tentative < GUESSES);
 }
 
-
-function checkIfWin() {
+//Check if the guess is correct or not
+function checkIfCorrect() {
     if (input > randomNum) {
         console.log("WRONG! Your guess is to high");
         return false;
@@ -41,3 +51,21 @@ function checkIfWin() {
         return true;
     }
 }
+
+//Ask if the player wants to play again
+function requestToPlayAgain() {
+    const playAgain = parseInt(rls.question("If you want to play again press 1 or 0 to exit "));
+    if (playAgain == 1) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+
+
+
+
+
+
