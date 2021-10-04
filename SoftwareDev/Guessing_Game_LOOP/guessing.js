@@ -12,7 +12,7 @@ do {
 }
 while (requestToPlayAgain());
 
-// RUN the main methods for the game
+// RUN the game
 function executeGame() {
     while (GUESSES > tentative) {
         getUserGuess();
