@@ -4,7 +4,7 @@ console.log("Try to guess the hidden number inserting a number between 1 and 10.
 const GUESSES = 5;
 let tentative = 0;
 let input;
-const randomNum = Math.ceil(Math.random() * 10);
+let randomNum = Math.ceil(Math.random() * 10);
 
 // MAIN
 do {
@@ -48,6 +48,7 @@ function checkIfCorrect() {
     }
     else {
         console.log("CORRECT!, the number was " + randomNum);
+        randomNum = Math.ceil(Math.random() * 10);
         return true;
     }
 }
@@ -62,10 +63,3 @@ function requestToPlayAgain() {
         return false;
     }
 }
-
-
-
-
-
-
-
