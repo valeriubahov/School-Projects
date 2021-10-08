@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+        }
+
+        #flexbox_container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 60%;
+            width: 100%;
+            background-color: rgb(211, 185, 185);
+        }
+
+        #flexbox_container>div {
+            border-style: solid;
+            background-color: slategray;
+            width: 100px;
+            height: 100px;
+            border-width: 1px;
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            display: flex;
+            width: 100%;
+            height: 40%;
+        }
+
+        .box {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            align-self: center;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+
+        .box>h1 {
+            position: absolute;
+            color: whitesmoke;
+            font-size: 70px;
+        }
+
+        img {
+            max-height: 100%;
+            min-width: 100%;
+            object-fit: cover;
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+
+<body>
+    
+</body>
+
+</html>
