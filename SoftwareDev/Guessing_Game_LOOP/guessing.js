@@ -11,20 +11,24 @@ const randomNum = Math.ceil(Math.random() * 10);
 while (GUESSES > tentative) {
     do {
         input = rls.question("Please enter a number between 1 and 10 ");
+        tentative++;
+
     } //JS likes to have the Number verificator with a NOT statement
-    while (isNaN(input) || (input < 1 || input > 10));
+    while ((isNaN(input) || (input < 1 || input > 10)) && tentative < GUESSES);
 
     if (input > randomNum) {
         console.log("WRONG! Your guess is to high");
-        tentative++;
+
     }
     else if (input < randomNum) {
         console.log("WRONG! Your guess is to low");
-        tentative++;
+
+    }
+    else if (isNaN(input)) {
+        console.log("Sorry you used all your tentatives!");
     }
     else {
         console.log("CORRECT!, the number was " + randomNum);
-        tentative++;
         break;
     }
 }
