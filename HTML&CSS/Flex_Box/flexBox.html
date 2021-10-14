@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+        }
+
+        #flexbox_container {
+            display: flex;
+            border-style: solid;
+            border-width: 2px;
+            height: 60%;
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgb(211, 185, 185);
+        }
+
+        #flexbox_container>div {
+            width: 100px;
+            height: 100px;
+            color: white;
+            text-align: center;
+            align-self: center;
+        }
+
+        header {
+            display: flex;
+            width: 100%;
+            height: 40%;
+        }
+
+        .box {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            align-self: center;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+
+        .box>h1 {
+            position: absolute;
+            color: whitesmoke;
+            font-size: 70px;
+        }
+
+        img {
+            max-height: 100%;
+            min-width: 100%;
+            object-fit: cover;
+            vertical-align: bottom;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .myDivs {
+            align-content: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="box">
+            <h1>Get your Pumpkin for Halloween!</h1>
+            <img src="/HTML&CSS/Form_Inclass/pumpkins.jpg" alt="">
+        </div>
+    </header>
+
+
+    <div id="flexbox_container">
+        <form action="submit" method="POST">
+            <div class="myDivs">
+                <div>
+                    <p>Insert your name: </p>
+                    <input type="text" size=25>
+                </div>
+                <div>
+                    <p>Insert your email: </p>
+                    <input type="text" size=25>
+                </div>
+                <div>
+                    <p>What size do you want?</p>
+                    <input type="radio" id="small" name="pump" value="Small">
+                    <label for="small">Small</label>
+                    <input type="radio" id="medium" name="pump" value="Medium">
+                    <label for="medium">Medium</label>
+                    <input type="radio" id="large" name="pump" value="Large">
+                    <label for="large">Large</label>
+                </div>
+                <br>
+                <div>
+                    <label>How many?</label>
+                    <select id="number">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                      </select>
+
+                </div>
+
+                <button name="submit"></button>
+            </div>
+    </div>
+</body>
+
+</html>

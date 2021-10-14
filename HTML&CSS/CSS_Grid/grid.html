@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout</title>
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #grid {
+            display: grid;
+            grid-template-rows: 1.5fr 8.5fr 20px;
+            grid-template-columns: 25% 50% 25%;
+            height: 100%;
+        }
+
+        header {
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: 4;
+            background-color: indianred;
+            text-align: center;
+        }
+
+        article {
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            background-color: paleturquoise;
+            height: 100%;
+        }
+
+        nav {
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            background-color: lavenderblush;
+            height: 100%;
+        }
+
+
+        aside {
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 3;
+            grid-column-end: 4;
+            background-color: lightgrey;
+            height: 100%;
+        }
+
+        footer {
+            grid-row-start: 3;
+            grid-row-end: 4;
+            grid-column-start: 1;
+            grid-column-end: 4;
+            text-align: center;
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="grid">
+        <header>
+            This is my header to test the layout
+        </header>
+
+        <nav>
+            menu
+        </nav>
+
+        <article>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam molestiae, fuga, magni eum laboriosam
+                illo
+                veritatis voluptates odio voluptate est animi, voluptas nihil ipsum a repellat quas distinctio tempore
+                officiis.
+                Exercitationem, nihil qui doloribus distinctio in atque rem officia deserunt doloremque dicta quis
+                asperiores
+                fuga dolorem aut earum alias, cumque quaerat esse modi! Fugit similique sint enim minus delectus
+                dolores.
+                Hic architecto officiis rerum cum fugiat commodi enim, cumque non debitis sequi iure, quos praesentium
+                laudantium molestias omnis in facilis quaerat at! Nihil laboriosam dignissimos suscipit dolorem a
+                sapiente
+                nulla!
+                Mollitia harum ratione pariatur quae quas, atque dolorem beatae aspernatur quos porro id? Fugit suscipit
+                iste
+                molestiae aliquam nobis doloremque in quam, reiciendis sed pariatur a dolores earum veniam ad?
+                Hic itaque rerum nam ipsum sequi aspernatur iure eveniet ducimus maiores, unde quis illum nobis vel
+                officiis
+                cum
+                adipisci aliquam id. Quibusdam neque consectetur earum nulla magnam in ratione aspernatur.
+                Exercitationem dignissimos voluptate recusandae possimus amet laborum sunt quidem repellendus ipsam vero
+                aspernatur, non rerum illo perferendis nemo eum, tenetur nostrum facilis suscipit? Vero fuga facere
+                iusto
+                similique perferendis repudiandae?
+                Voluptas architecto eius laborum vitae quasi. Quis, reprehenderit. Voluptatem ab porro beatae? Minima
+                tempore
+                fuga explicabo, debitis praesentium in quasi repudiandae, adipisci, odio deleniti ratione aspernatur! Ex
+                corrupti eligendi nesciunt?
+                Officia fugit sint accusantium nihil inventore enim veritatis, cumque amet hic, consequatur non est
+                error,
+                adipisci sed impedit! Voluptatibus odio, beatae eveniet ullam atque provident quod! Quod exercitationem
+                laboriosam aliquam?</p>
+        </article>
+        <aside>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius placeat veniam voluptas odio nam corrupti
+            obcaecati, architecto hic! Illo a suscipit at nisi tempora atque sed aliquam beatae deleniti. Impedit!
+            Iste corrupti quas voluptatibus consectetur nisi, magni culpa sed ipsum illo beatae. Assumenda ea pariatur
+            voluptatum dolorum consequatur at? Aliquam eius pariatur doloremque nemo labore modi corporis facilis
+            aspernatur tempore!
+            Voluptatum amet inventore atque ab natus illo alias nulla suscipit nisi fuga est temporibus necessitatibus
+            voluptate ex laborum provident itaque accusantium quisquam enim, adipisci aperiam, aspernatur quis. Cumque,
+            laboriosam nobis!
+            Quia accusantium quaerat doloremque. Ab, veritatis dicta! Debitis et distinctio laudantium suscipit illo
+            cumque! Saepe delectus fuga possimus iusto molestias modi quibusdam obcaecati, nostrum blanditiis beatae
+            assumenda explicabo molestiae magnam.
+            Possimus deserunt debitis perspiciatis ut quia ad optio illum nesciunt quaerat quasi ea voluptate corporis
+            doloribus, omnis itaque minus sed voluptates similique excepturi provident, inventore, repudiandae libero
+            velit accusantium. Nam.
+        </aside>
+        <footer>
+            Valeriu Bahov, XX Street Name, City, Province
+        </footer>
+    </div>
+</body>
+
+</html>

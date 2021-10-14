@@ -8,14 +8,23 @@ let arr_playersNames = [PLAYERS_NUMBER];
 //TEAMS LOOP
 while (teamsCount <= TEAM_NUMBERS) {
 
-    //INSERTING TEAM NAMES
-    const teamName = rls.question("Please enter team " + teamsCount + " name: ");
+    //INSERTING TEAM NAMES - Not accepting null or empty space only
+    let teamName;
+    do {
+        teamName = rls.question("Please enter Team " + teamsCount + " name: ");
+    }
+    while (teamName == null || teamName.trim() === '');
 
     console.log('', '');
 
-    //INSERTING PLAYER NAMES
+    //INSERTING PLAYER NAMES - Not accepting blanck space only or nulls
     for (let i = 1; i <= PLAYERS_NUMBER; i++) {
-        const playerName = rls.question("Please enter the " + i + " player name for the team " + teamsCount + " ");
+        let playerName;
+        do {
+            playerName = rls.question("Please enter the " + i + " player name for the Team " + teamName + " ");
+        }
+        while (playerName == null || playerName.trim() === '');
+
         const k = i - 1;
         arr_playersNames[k] = playerName;
     }
