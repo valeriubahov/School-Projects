@@ -6,7 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Grid Layout</title>
-
+    <script>
+        new fullpage('#fullpage', {
+            navigation: true,
+            responsiveWidth: 700,
+            anchors: ['home', 'about-us', 'contact'],
+            parallax: true,
+            onLeave: function (origin, destination, direction) {
+                console.log("Leaving section" + origin.index);
+            },
+        });
+    </script>
     <style>
         html,
         body {
