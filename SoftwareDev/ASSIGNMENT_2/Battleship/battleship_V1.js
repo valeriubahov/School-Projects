@@ -1,27 +1,38 @@
 const rls = require('readline-sync');
 const fs = require('fs');
+console.log('', '');
 
 let gameMap = [];
+let missiles = 30;
 let numbersOfHits = 0;
+let countHitShips = 0;
 
-//Read the file and create the matrix with ships positions
-const MAP_PATH = "SoftwareDev/ASSIGNMENT_2/Battleship/map.txt";
+// Read the file and create the matrix with ships positions
+const MAP_PATH = "SoftwareDev/ASSIGNMENT_2/Battleship/map_V1.txt";
 const MAP_CONTENT = fs.readFileSync(MAP_PATH, "utf-8");
 
 const SPLIT_LINES = MAP_CONTENT.split("\r\n");
-
+let arr_positions = "";
 for (let i = 0; i < SPLIT_LINES.length; i++) {
-    const ARR_POSITIONS = SPLIT_LINES[i].split(',');
-    numbersOfHits += ARR_POSITIONS.filter(x => x === '1').length;
-    gameMap[i] = ARR_POSITIONS;
+    arr_positions = SPLIT_LINES[i].split(',');
+    numbersOfHits += arr_positions.filter(x => x === '1').length;
+    gameMap[i] = arr_positions;
 }
-//END OF THE MATRIX SETTING
+// End of the matrix setting
 
-let missiles = 30;
-console.log("Let's play Battleship!");
+
+console.log("╭╮     ╭╮        ╭╮        ╭━━╮   ╭╮ ╭╮╭╮      ╭╮     ╭╮" + "\n" +
+    "┃┃    ╭╯╰┳╮      ┃┃        ┃╭╮┃  ╭╯╰┳╯╰┫┃      ┃┃     ┃┃" + "\n" +
+    "┃┃  ╭━┻╮╭┫┣━━╮╭━━┫┃╭━━┳╮ ╭╮┃╰╯╰┳━┻╮╭┻╮╭┫┃╭━━┳━━┫╰━┳┳━━┫┃" + "\n" +
+    "┃┃ ╭┫┃━┫┃╰┫━━┫┃╭╮┃┃┃╭╮┃┃ ┃┃┃╭━╮┃╭╮┃┃ ┃┃┃┃┃┃━┫━━┫╭╮┣┫╭╮┣╯" + "\n" +
+    "┃╰━╯┃┃━┫╰╮┣━━┃┃╰╯┃╰┫╭╮┃╰━╯┃┃╰━╯┃╭╮┃╰╮┃╰┫╰┫┃━╋━━┃┃┃┃┃╰╯┣╮" + "\n" +
+    "╰━━━┻━━┻━╯╰━━╯┃╭━┻━┻╯╰┻━╮╭╯╰━━━┻╯╰┻━╯╰━┻━┻━━┻━━┻╯╰┻┫╭━┻╯" + "\n" +
+    "              ┃┃      ╭━╯┃                         ┃┃" + "\n" +
+    "              ╰╯      ╰━━╯                         ╰╯");
+
 console.log("You have", missiles, "missiles to fire to sink all five ships.")
 
-//GENERATE THE MAP THAT THE USER WILL USE - THE MAP WILL COUNT ROWS FROM 0 AND NOT FROM 1 
+// Generate the map that the user will see and use - the map will count rows from 0 and not from 1 
 const HEADER_ARRAY = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
 let viewMap = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -37,13 +48,12 @@ let viewMap = [
 ];
 console.table(viewMap, HEADER_ARRAY);
 
-let countHitShips = 0;
 
 while (missiles > 0) {
     playGame();
 }
 
-//If the user finish all the missiles - GAME OVER
+// If the user finish all the missiles - GAME OVER
 if (countHitShips < numbersOfHits) {
     console.log("You have 0 missiles remaining");
     console.log("GAME OVER.");
@@ -55,28 +65,32 @@ if (countHitShips < numbersOfHits) {
 ////////////////////////////////////////////////        FUNCTIONS AREA      ////////////////////////////////////////////////
 
 function playGame() {
+    let position = "";
     let columnPosition = "";
     let rowPosition = "";
-    //Input check and validation
+
+    // User input, check and validation
     do {
-        const position = rls.question("Choose your targer (Ex. A0 to A9): ").toUpperCase();
+        position = rls.question("Choose your targer (Ex. A0 to A9): ").toUpperCase();
         columnPosition = position.charAt(0, 1);
         rowPosition = parseInt(position.substr(1));
     }
     while (!isColumnPositionVlaid(columnPosition) || !isRowPositionValid(rowPosition));
-    //Once the input is validated it counts as a shot.
+
+    // Once the input is validated it counts as a shot.
     missiles--;
 
-    //Check if the user hit or missed the ship
+    // Check if the user hit or missed the ship
     checkIfHit(columnPosition, rowPosition);
 
-    //Check if the user hit all the ships
+    // Check if the user hit all the ships
     if (countHitShips == numbersOfHits) {
         console.log("YOU SANK MY ENTIRE FLEET!");
         console.log("You had", countHitShips, "of", numbersOfHits, "hits, whitch sank all ships");
         console.log("You won, congratulations!");
     }
 }
+
 
 function checkIfHit(column, row) {
     if (gameMap[row][HEADER_ARRAY.indexOf(column)] === '1') {
