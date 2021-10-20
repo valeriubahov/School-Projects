@@ -28,14 +28,34 @@ function getUserGuess() {
     do {
         input = rls.question("Please enter a number between 1 and 10 ");
         tentative++;
+<<<<<<< HEAD
+
+    } //JS likes to have the Number verificator with a NOT statement
+    while ((isNaN(input) || (input < 1 || input > 10)) && tentative < GUESSES);
+=======
     } //JS likes to have the Number verificator with a NOT statement
     while ((isNaN(input) || (input < 1 || input > 10)) && tentative < GUESSES);
 }
+>>>>>>> 47a66a82091dab973ca2c40162b2538eb3e0c641
 
 //Check if the guess is correct or not
 function checkIfCorrect() {
     if (input > randomNum) {
         console.log("WRONG! Your guess is to high");
+<<<<<<< HEAD
+
+    }
+    else if (input < randomNum) {
+        console.log("WRONG! Your guess is to low");
+
+    }
+    else if (isNaN(input)) {
+        console.log("Sorry you used all your tentatives!");
+    }
+    else {
+        console.log("CORRECT!, the number was " + randomNum);
+        break;
+=======
         return false;
     }
     else if (input < randomNum) {
@@ -61,5 +81,6 @@ function requestToPlayAgain() {
     }
     else {
         return false;
+>>>>>>> 47a66a82091dab973ca2c40162b2538eb3e0c641
     }
 }
