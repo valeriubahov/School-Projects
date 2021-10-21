@@ -1,15 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="..\styles\styles_Me.css">
+    <script src="..\scripts\scriptAboutMe.js"></script>
+    <title>Home</title>
 </head>
 
 <body>
+    <div id="grid">
+        <header>
+            <div class="separator reverse"></div>
+            
+        </header>
+        <article>
+            <div id="centeredDiv">
+                <pre id="typewriter">
+console.log(<span class="string-highlight">'Hello!'</span>);
+<span class="var-highlight">let</span> developer = {
+    name: <span class="string-highlight">'Valeriu Bahov'</span>,
+    age: <span class="string-highlight">'27'</span>,
+    location: <span class="string-highlight">'Bedford, NS, Canada'</span>,
+    experience:[<span class="string-highlight">'Web Developer'</span>,
+                <span class="string-highlight">'Backend Developer'</span>,
+                <span class="string-highlight">'Full Stack Developer'</span>];
+}; 
+<span class="var-highlight">let</span> contacts = {
+    email: <span class="string-highlight">'w0459263@campus.nscc.ca'</span>,
+    phone: <span class="string-highlight">'902-400-5615'</span>
+};
+</pre>
+            </div>
+        </article>
 
+        <aside>
+            <img src="..\media\myself.jpg" id="mySelf" alt="Valeriu Bahov">
+        </aside>
+
+        <footer>
+            <div class="separatorReverseColor"></div>
+        </footer>
+
+    </div>
 </body>
 
 </html>

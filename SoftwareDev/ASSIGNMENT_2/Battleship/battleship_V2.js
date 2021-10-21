@@ -89,7 +89,7 @@ function playGame() {
 
     // User input, check and validation
     do {
-        position = rls.question("Choose your targer (Ex. A0 to A9): ").toUpperCase();
+        position = rls.question("Choose your target (Ex. A0 to A9): ").toUpperCase();
         columnPosition = position.charAt(0, 1);
         rowPosition = parseInt(position.substr(1));
     }
