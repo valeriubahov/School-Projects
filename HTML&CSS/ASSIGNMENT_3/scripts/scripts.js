@@ -1,5 +1,5 @@
 
-
+const navMenu = document.getElementsByClassName('.nav');
 window.onwheel = e => {
     if (e.deltaY > 0) {
         // Scrolling Down with mouse
@@ -54,13 +54,16 @@ function arrowDownScroll() {
     if (document.getElementById('check-2').checked == true) {
         var elem = document.getElementById('check-3');
         setTimeout(function () { elem.checked = true; }, 300);
+       
+        document.getElementById('navMenuItem').style.backgroundColor='blue';
     }
     else {
         if (document.getElementById('check-3').checked == false) {
             var elem = document.getElementById('check-2');
             setTimeout(function () { elem.checked = true; }, 300);
+            document.getElementById('navMenuItem').style.backgroundColor='#E18A07';
         }
-    }
+    } 
 };
 
 function arrowUpScroll() {
@@ -68,20 +71,23 @@ function arrowUpScroll() {
     if (document.getElementById('check-3').checked == true) {
         var elem = document.getElementById('check-2');
         setTimeout(function () { elem.checked = true; }, 300);
+
+        document.getElementById('navMenuItem').style.backgroundColor='#E18A07';
     }
     else {
         var elem = document.getElementById('check-1');
         setTimeout(function () { elem.checked = true; }, 300);
+        document.getElementById('navMenuItem').style.backgroundColor='darkcyan';
     }
 };
 
 
-$(function () {
-    let arrow = document.getElementById("downArrow");
-    arrow.onclick = function () {
-        document.getElementById('check-2').checked = true;
-    }
-});
+// $(function () {
+//     let arrow = document.getElementById("downArrow");
+//     arrow.onclick = function () {
+//         document.getElementById('check-2').checked = true;
+//     }
+// });
 
 $(document).ready(function () {
     $('#middleDiv').load('aboutMe.html');
