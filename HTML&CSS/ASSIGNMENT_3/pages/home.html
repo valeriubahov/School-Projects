@@ -12,23 +12,42 @@
 </head>
 
 <body>
-    <div class="main">
-        <div class="center">
+    <div class="cursor"></div>
+    <div class="main"> </div>
+    <div class="center"> </div>
+    <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon" />
+    <label for="menu-icon"></label>
+    <nav class="nav">
+        <ul class="pt-5">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="https://drive.google.com/file/d/1EafRTLOaEbjYBgckBIfArwJmMjRC241J/view">Resume</a></li>
+        </ul>
+    </nav>
 
-            <input type="radio" id="check-1" name="rd" /><br>
-            <input type="radio" id="check-2" name="rd" /><br>
-            <input type="radio" id="check-3" name="rd" />
+    <input type="radio" id="check-1" name="rd" /><br>
+    <input type="radio" id="check-2" name="rd" /><br>
+    <input type="radio" id="check-3" name="rd" />
 
-            <div class="bg">
-                <div id="topDiv">
-                    <a class="ca3-scroll-down-link ca3-scroll-down-arrow" id="downArrow" data-ca3_iconfont="ETmodules"
-                        data-ca3_icon=""></a>
-                </div>
-                <div id="middleDiv"></div>
-                <div id="bottomDiv"></div>
-            </div>
+    <div class="bg">
+
+        <div id="topDiv">
+            <a class="ca3-scroll-down-link ca3-scroll-down-arrow" id="downArrow" data-ca3_iconfont="ETmodules"
+                data-ca3_icon=""></a>
         </div>
+        <div id="middleDiv"></div>
+        <div id="bottomDiv"></div>
     </div>
+
+    <script>
+        const cursor = document.querySelector('.cursor');
+
+        document.addEventListener('mousemove', e => {
+            cursor.setAttribute("style", "top: " + e.pageY + "px; left: " + e.pageX + "px;");
+        });
+    </script>
 </body>
 
 </html>

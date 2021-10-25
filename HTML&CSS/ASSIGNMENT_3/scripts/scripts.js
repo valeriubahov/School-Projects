@@ -1,5 +1,7 @@
+
+
 window.onwheel = e => {
-    if (e.deltaY >= 0) {
+    if (e.deltaY > 0) {
         // Scrolling Down with mouse
         if (document.getElementById('check-2').checked == true) {
             var elem = document.getElementById('check-3');

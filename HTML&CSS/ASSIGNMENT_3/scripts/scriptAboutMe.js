@@ -8,10 +8,10 @@ function setupTypewriter(t) {
         writingTag = false,
         tagOpen = false,
         typeSpeed = 100,
-      tempTypeSpeed = 0;
+        tempTypeSpeed = 0;
 
-    var type = function() {
-      
+    var type = function () {
+
         if (writingTag === true) {
             tag += HTML[cursorPosition];
         }
@@ -67,6 +67,4 @@ var typer = document.getElementById('typewriter');
 
 typewriter = setupTypewriter(typewriter);
 
-typewriter.type(); 
-
-
+typewriter.type();
