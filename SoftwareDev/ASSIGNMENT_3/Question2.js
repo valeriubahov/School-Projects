@@ -44,12 +44,11 @@ for (let i = 0; i < num_of_nums; i++) {
         minNumber = userInput;
         maxNumber = userInput
     }
-
 }
 
-averageNumber = Math.floor(averageNumber / num_of_nums);
+averageNumber = (averageNumber / num_of_nums).toFixed(2);
 
 console.log('', '');
 console.log("Average Number: " + averageNumber);
-console.log("Minimum value: " + minNumber);
-console.log("Maximun value: " + maxNumber);
+console.log("Minimum value entered: " + minNumber);
+console.log("Maximum value entered: " + maxNumber);

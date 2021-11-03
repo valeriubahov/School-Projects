@@ -34,6 +34,9 @@ do {
             if (wordVowels !== null) {
                 vowelsCount += wordVowels.length;
             }
+            if (!isSentenceValid) {
+                break;
+            }
         }
         if (vowelsCount > 8) {
             console.log("The sentence must contain no more than 8 vowels");

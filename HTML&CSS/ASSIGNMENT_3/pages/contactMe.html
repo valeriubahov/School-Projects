@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="..\styles\styles.css">
+    <link rel="stylesheet" href="..\styles\styles_contact.css">
+    <script src="..\scripts\script_contact.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon" />
+        <label for="menu-icon"></label>
+        <nav class="nav" id="navMenuItem">
+            <ul class="pt-5">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="tableExample.html">Table Example</a></li>
+                <li><a href="contactMe.html">Contact Me</a></li>
+                <li><a href="https://drive.google.com/file/d/1EafRTLOaEbjYBgckBIfArwJmMjRC241J/view">Resume</a></li>
+            </ul>
+        </nav>
+        <span class="big-circle"></span>
+        <img src="../media/shape.png" class="square" alt="" />
+        <div class="form">
+            <div class="contact-info">
+                <h3 class="title">Let's get in touch</h3>
+                <p class="text">
+                    Feel free to email or call me anytime.
+                </p>
+
+                <div class="info">
+                    <div class="information">
+                        <img src="../media/location.png" class="icon" alt="" />
+                        <p>22 Armenia Drive, Bedford, NS, Canada</p>
+                    </div>
+                    <div class="information">
+                        <img src="../media/email.png" class="icon" alt="" />
+                        <p>bahovvaleriu@gmail.com</p>
+                    </div>
+                    <div class="information">
+                        <img src="../media/phone.png" class="icon" alt="" />
+                        <p>(902) 440-5615</p>
+                    </div>
+                </div>
+
+                <div class="social-media">
+                    <p>Connect with me :</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/valeriu.bahov">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://github.com/valeriubahov">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/valeriu-bahov-46324886">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <span class="circle one"></span>
+                <span class="circle two"></span>
+
+                <form action="/submit" autocomplete="off" method="POST">
+                    <h3 class="title">Contact me</h3>
+                    <div class="input-container focus">
+                        <input type="text" name="name" class="input" />
+                        <label for="">Username</label>
+                        <span>Username</span>
+                    </div>
+                    <div class="input-container focus">
+                        <input type="email" name="email" class="input" />
+                        <label for="">Email</label>
+                        <span>Email</span>
+                    </div>
+                    <div class="input-container focus">
+                        <input type="tel" name="phone" class="input" />
+                        <label for="">Phone</label>
+                        <span>Phone</span>
+                    </div>
+                    <div class="input-container textarea focus">
+                        <textarea name="message" class="input"></textarea>
+                        <label for="">Message</label>
+                        <span>Message</span>
+                    </div>
+                    <input type="submit" value="Send" class="btn" />
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
