@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- <script src="script.js"></script> -->
+    <title>Calculator</title>
+    <style>
+        html,
+        body {
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            background-color: lightgray;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input {
+            height: 200px;
+            width: 200px;
+            text-align: center;
+            align-items: center;
+            vertical-align: middle;
+            font-size: 30px;
+        }
+
+        #row1 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #row2 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #row3 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #row4 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #row5 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="result">0</h1>
+    </header>
+    <form onsubmit="calculate()">
+        <div id="row1">
+            <input type="button" id="reset" value="C">
+            <input type="button" id="delete" value="DELETE">
+            <input type="button" id="division" value="/">
+            <input type="button" id="molt" value="*">
+        </div>
+        <div id="row2">
+            <input type="button" id="num1" value="1">
+            <input type="button" id="num2" value="2">
+            <input type="button" id="num3" value="3">
+            <input type="button" id="plus" value="+">
+        </div>
+        <div id="row3">
+            <input type="button" id="num4" value="4">
+            <input type="button" id="num5" value="5">
+            <input type="button" id="num6" value="6">
+            <input type="button" id="minus" value="-">
+        </div>
+        <div id="row4">
+            <input type="button" id="num7" value="7">
+            <input type="button" id="num8" value="8">
+            <input type="button" id="num9" value="9">
+            <input type="submit" id="equals" value="=">
+        </div>
+
+        <div id="row5">
+            <input type="button" id="emptyCol" value="">
+            <input type="button" id="num0" value="0">
+            <input type="button" id="comma" value=".">
+            <input type="button" id="emptyCol" value="">
+    </form>
+
+    <script>
+        let numBuffer = [];
+        let numString = '';
+        let total = 0;
+
+        // CALCULATE
+        function calculate() {
+            if (numString !== '') {
+                numBuffer.push(parseFloat(numString));
+                numString = '';
+            }
+            if (numBuffer.length > 1) {
+                const a = numBuffer.join('');
+                let sum = eval(a);
+                document.getElementById('result').innerText = sum;
+                total = sum;
+            }
+            event.preventDefault();
+            numBuffer = [];
+            numString = '';
+
+        }
+
+        document.getElementById('equals').addEventListener('click', calculate);
+        document.getElementById('plus').addEventListener('click', saveOperation);
+        document.getElementById('minus').addEventListener('click', saveOperation);
+        document.getElementById('division').addEventListener('click', saveOperation);
+        document.getElementById('molt').addEventListener('click', saveOperation);
+
+
+        // SAVE THE OPERATION
+        function saveOperation() {
+            if (numString !== "") {
+                numBuffer.push(parseFloat(numString));
+                numBuffer.push(this.value);
+            }
+            else {
+                if (total !== 0) {
+                    numBuffer.push(total);
+                    numBuffer.push(this.value);
+                }
+                else {
+                    numBuffer.push(0);
+                    numBuffer.push(this.value);
+                }
+            }
+            document.getElementById('result').innerText = numBuffer.join('');
+            numString = '';
+        }
+
+
+        document.getElementById('num1').addEventListener('click', storeData);
+        document.getElementById('num2').addEventListener('click', storeData);
+        document.getElementById('num3').addEventListener('click', storeData);
+        document.getElementById('num4').addEventListener('click', storeData);
+        document.getElementById('num5').addEventListener('click', storeData);
+        document.getElementById('num6').addEventListener('click', storeData);
+        document.getElementById('num7').addEventListener('click', storeData);
+        document.getElementById('num8').addEventListener('click', storeData);
+        document.getElementById('num9').addEventListener('click', storeData);
+        document.getElementById('num0').addEventListener('click', storeData);
+        document.getElementById('comma').addEventListener('click', storeData);
+
+
+        //SAVE THE NUMBERS
+        function storeData() {
+            numString += this.value;
+            if (numBuffer.length > 0) {
+                document.getElementById('result').innerText = numBuffer.join("") + numString;
+            }
+            else {
+                document.getElementById('result').innerText = numString;
+            }
+        }
+
+        // CLEAR ALL DATA
+        document.getElementById('reset').addEventListener('click', reset);
+        function reset() {
+            numBuffer = [];
+            numString = '';
+            total = 0;
+            document.getElementById('result').innerText = '0';
+        }
+
+        // DELETE THEN NUMBER YOU INSERT
+        document.getElementById('delete').addEventListener('click', deleteNumber);
+        function deleteNumber() {
+            numString = '';
+            if (numBuffer.length > 0) {
+                document.getElementById('result').innerText = numBuffer.join("") + numString;
+            }
+            else {
+                document.getElementById('result').innerText = "0";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

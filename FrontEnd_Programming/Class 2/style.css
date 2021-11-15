@@ -1,0 +1,58 @@
+html,
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    background-color: lightgray;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    align-items: center;
+    vertical-align: middle;
+    font-size: 30px;
+}
+
+#row1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#row2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#row3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#row4 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#row5 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

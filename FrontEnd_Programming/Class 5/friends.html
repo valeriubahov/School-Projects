@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friends Episodes Summary</title>
+    <script src="friends.js"></script>
+</head>
+
+<body>
+    <ol id="episodeList"></ol>
+
+
+    <script>
+        const arrEpisodes = friendsData._embedded.episodes;
+        const list = document.getElementById('episodeList');
+
+        arrEpisodes.forEach(element => writeListItem(element.summary));
+
+        checkGunther();
+
+
+        function checkGunther() {
+            let counter = 0;
+            arrEpisodes.forEach(element => {
+                if (element.summary.match('Gunther')) {
+                    counter++;
+                }
+            });
+            alert("Gunther is mentioned " + counter + " time");
+        }
+
+        function writeListItem(data) {
+            const listItem = document.createElement('li');
+            listItem.innerHTML = data;
+            list.appendChild(listItem);
+        }
+    </script>
+</body>
+
+</html>
+
+
+<!-- Total number of episodes where the character Gunther is mentioned in the episode summary -->
