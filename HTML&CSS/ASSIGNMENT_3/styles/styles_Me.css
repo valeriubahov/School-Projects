@@ -143,7 +143,11 @@ footer {
 #centeredDiv {
     display: flex;
     height: 600px;
+<<<<<<< HEAD
     /* align-items: center; */
+=======
+    align-items: center;
+>>>>>>> 8ffb118183ac4a86be650a7d45f7d501d49df071
     font-family: 'Bowlby One SC', cursive;
     /* font-size: 16px; */
     /* font-size: 4vw; */

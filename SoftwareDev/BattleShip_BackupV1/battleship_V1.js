@@ -8,7 +8,7 @@ let numbersOfHits = 0;
 let countHitShips = 0;
 
 // Read the file and create the matrix with ships positions
-const MAP_PATH = "SoftwareDev/ASSIGNMENT_2/Battleship/map_V1.txt";
+const MAP_PATH = "SoftwareDev/BattleShip_BackupV1/map_V1.txt";
 const MAP_CONTENT = fs.readFileSync(MAP_PATH, "utf-8");
 
 const SPLIT_LINES = MAP_CONTENT.split("\r\n");

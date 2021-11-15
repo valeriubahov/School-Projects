@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "schoolprojects",
   "version": "1.0.0",
   "description": "",
@@ -20,4 +21,9 @@
     "url": "https://github.com/valeriubahov/School-Projects/issues"
   },
   "homepage": "https://github.com/valeriubahov/School-Projects#readme"
+=======
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+>>>>>>> 8ffb118183ac4a86be650a7d45f7d501d49df071
 }

@@ -22,3 +22,4 @@ for (let i = arrSentence.length - 1; i >= 0; i--) {
 console.log('', '');
 console.log("The randomly printed sentence is: ");
 console.log(arrSentence.join(" "));
+console.log('', '');
