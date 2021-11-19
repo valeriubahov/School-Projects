@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spaceship Coolers</title>
+    <script src="ships.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="shipView">
+        <h1>SPACESHIPS</h1>
+        <div class="tbl-header">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <thead>
+                    <tr>
+                        <th>Ship</th>
+                        <th>Weapon</th>
+                        <th>Shield</th>
+                        <th>Power Plant</th>
+                        <th>Engine</th>
+                        <th>Cooler</th>
+                        <th></th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div id="ships" class="tbl-content"></div>
+    </div>
+
+    <div class="itemView">
+        <div>
+            <h1 class="h1-half">WEAPONS</h1>
+            <div class="tbl-header-half">
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Size</th>
+                            <th>Grade</th>
+                            <th>Damage</th>
+                            <th>Cost</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div id="weapons" class="tbl-content-half"></div>
+            <form id="newWeapon">
+                <div class="tbl-content-form">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="text" name="weapName">
+                                </td>
+                                <td>
+                                    <input type="text" name="weapSize">
+                                </td>
+                                <td>
+                                    <input type="text" name="weapGrade">
+                                </td>
+                                <td>
+                                    <input type="text" name="weapDamage">
+                                </td>
+                                <td>
+                                    <input type="text" name="weapCost">
+                                </td>
+                                <td>
+                                    <button id="btnNewWeap">New Weapon</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+        </div>
+        <div>
+            <h1 class="h1-half">SHIELDS</h1>
+            <div class="tbl-header-half">
+
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Size</th>
+                            <th>Grade</th>
+                            <th>Hit Points</th>
+                            <th>Cost</th>
+                            <th>Emission</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div id="shields" class="tbl-content-half"></div>
+            <form id="newShield">
+                <div class="tbl-content-form">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="text" name="shieldName">
+                                </td>
+                                <td>
+                                    <input type="text" name="shieldSize">
+                                </td>
+                                <td>
+                                    <input type="text" name="shieldGrade">
+                                </td>
+                                <td>
+                                    <input type="text" name="shieldHP">
+                                </td>
+                                <td>
+                                    <input type="text" name="shieldCost">
+                                </td>
+                                <td>
+                                    <input type="text" name="shieldEmission">
+                                </td>
+                                <td>
+                                    <button id="btnNewShield">New Shield</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="itemView">
+        <div>
+            <h1 class="h1-half">COOLERS</h1>
+            <div class="tbl-header-half">
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Size</th>
+                            <th>Grade</th>
+                            <th>Power</th>
+                            <th>Cost</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div id="coolers" class="tbl-content-half"></div>
+            <form id="newCooler">
+                <div class="tbl-content-form">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="text" name="coolName">
+                                </td>
+                                <td>
+                                    <input type="text" name="coolSize">
+                                </td>
+                                <td>
+                                    <input type="text" name="coolGrade">
+                                </td>
+                                <td>
+                                    <input type="text" name="coolPower">
+                                </td>
+                                <td>
+                                    <input type="text" name="coolCost">
+                                </td>
+                                <td>
+                                    <button id="btnNewWeap">New Cooler</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+        </div>
+        <div>
+            <h1 class="h1-half">POWER PLANTS</h1>
+            <div class="tbl-header-half">
+
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Size</th>
+                            <th>Grade</th>
+                            <th>Hit Points</th>
+                            <th>Cost</th>
+                            <th>Emission</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div id="shields" class="tbl-content-half"></div>
+            <form id="newShield">
+                <div class="tbl-content-form">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="text" name="shieldName">
+                                </td>
+                                <td>
+                                    <input type="text" name="shieldSize">
+                                </td>
+                                <td>
+                                    <input type="text" name="shieldGrade">
+                                </td>
+                                <td>
+                                    <input type="text" name="shieldHP">
+                                </td>
+                                <td>
+                                    <input type="text" name="shieldCost">
+                                </td>
+                                <td>
+                                    <input type="text" name="shieldEmission">
+                                </td>
+                                <td>
+                                    <button id="btnNewShield">New Shield</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
