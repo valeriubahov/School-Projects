@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#myDiv').text("BROOO");
+            // const myDiv = document.getElementById('myDiv');
+            // myDiv.innerText = "TEEEEEST";
+            $('#myDiv').css({ 'background-color': 'gray', 'color': 'white', 'height': '50vh' });
+            $('#myButton').click(function (event) {
+                $(event.targe).slideUp();
+                $('#myDiv').toggle();
+            });
+
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <div id="myDiv">AAAAAAAA</div>
+
+    <button type="button" id="myButton">TEST</button>
+</body>
+
+</html>

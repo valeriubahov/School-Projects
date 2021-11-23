@@ -100,7 +100,7 @@ html {
 }
 
 .carousel__item:nth-child(6) {
-    background-image: url(../media/angular.jpg);
+    background-image: url(../media/angularjs.png);
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
@@ -109,7 +109,7 @@ html {
 }
 
 .carousel__item:nth-child(7) {
-    background-image: url(../media/jquery.png);
+    background-image: url(../media/jquery.jpg);
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;

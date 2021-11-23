@@ -135,7 +135,7 @@ footer {
 
 #typewriter {
     font-size: 1.5em;
-    font-size: 1.9vw;
+    font-size: 1.8vw;
     margin: 0;
     font-family: "Courier New";
 }
@@ -143,10 +143,14 @@ footer {
 #centeredDiv {
     display: flex;
     height: 600px;
+<<<<<<< HEAD
+    /* align-items: center; */
+=======
     align-items: center;
+>>>>>>> 8ffb118183ac4a86be650a7d45f7d501d49df071
     font-family: 'Bowlby One SC', cursive;
-    font-size: 16px;
-    font-size: 4vw;
+    /* font-size: 16px; */
+    /* font-size: 4vw; */
 }
 
 @-webkit-keyframes blink {

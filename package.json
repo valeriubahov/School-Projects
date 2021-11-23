@@ -1,8 +1,32 @@
 {
+<<<<<<< HEAD
+  "name": "schoolprojects",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valeriubahov/School-Projects.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valeriubahov/School-Projects/issues"
+  },
+  "homepage": "https://github.com/valeriubahov/School-Projects#readme"
+=======
   "dependencies": {
     "express": "^4.17.1",
     "figlet": "^1.5.2",
     "nodemon": "^2.0.14",
     "readline-sync": "^1.4.10"
   }
+>>>>>>> 8ffb118183ac4a86be650a7d45f7d501d49df071
 }

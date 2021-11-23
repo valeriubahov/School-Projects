@@ -1,0 +1,87 @@
+Network Lecture
+
+	What is a Network?
+	
+	
+	Kinds of Network (stuff made of)
+		
+		Media (cabels wires made of coper, network card) - the stuff needed to transmit the datas between devices
+		
+		Typology - (the shape of network) - point to point, star, mesh, bus, Linear, Ring, Tree
+			Physical - how physically the network is made (like star)
+			Logical - how thing actually communicate in the shape
+				you can have a star shape but locially works like a ring
+		
+		Protocol - Are the rules that the network need to know how to communicate.
+		
+		Package connect networks - packages are compressed data (0 and 1) containing all information where to go and the content
+		
+		You can also connect networks together, Internetworks (example INTERNET)
+		
+		To connect to internet you need 4 informations
+			IP Address - 4 numbers going from 0 to 255 separated by a point 
+			Subnet Mask: 32 bit number (255.255.255.0) 
+			Gateway
+			DNS
+			
+		TCP/IPv4 use the 32 bit version)
+		IPv6 - 128 bit so we never run out of IP address
+		NAT - Network Address Translation -  translate your private address to a public address
+		
+		TCP/IP is the set of rules/protocol used to communicate 
+		
+		Gateway is the connector of your network to the outside world
+		
+		DHCP - Dynamic Host Configuration Protocol
+		
+		APIPA - Automatic Private IP Addressing :
+			It is a feature or characteristic in operating systems (eg. Windows) which enables computers to self-configure an IP address and subnet mask automatically when their 
+			DHCP(Dynamic Host Configuration Protocol) server isn't reachable.
+			
+		
+		
+		Level of Abstraction: - Look at situation in differents way and say differents things about the same thing, also need to ignore things we don't need and concentrate on those that we do
+				Are used also in IT
+				
+				Virtualization
+				OS
+				Applications
+				Algorithms
+				Programming languages
+				Assembly Language
+				Machine COde
+				Architecture
+				Logic Gates
+				Devices
+				
+				All the things happening at the same time!
+				
+				
+				
+				
+				OSI Model (Top to Bottom)					TCP/IP Model (Top to bottom)
+				Application Layer
+				Presentation Layer							Application Layer -  show the result
+				Session Layer
+				Transport Layer								Transport Layer - Logical Address
+				Network Layer (Logical Address)				Internet Layer - Phisical address
+				Data link Layer (Phisical Address - MAC)	Link Layer - convert the data into 0 and 1
+				Physical layer	(voltage, etc)
+		
+		Transport Layer
+		TCP (text) - UDP (Video, streaming)
+		
+		Internet Layer
+			Iv4 Packet header Format
+				
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
