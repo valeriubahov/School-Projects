@@ -1,0 +1,15 @@
+{
+  "name": "serverside",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "Valeriu Bahov",
+  "license": "ISC",
+  "description": "Server side testing",
+  "dependencies": {
+    "better-sqlite3": "^7.4.4"
+  }
+}
