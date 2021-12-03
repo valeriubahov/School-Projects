@@ -4,11 +4,9 @@ window.onwheel = e => {
         if (document.getElementById('check-2').checked == true) {
             var elem = document.getElementById('check-3');
             setTimeout(function () { elem.checked = true; }, 100);
-<<<<<<< HEAD
+
             document.getElementById('navMenuItem').style.backgroundColor = 'gray';
-=======
-            document.getElementById('navMenuItem').style.backgroundColor = 'blue';
->>>>>>> 8ffb118183ac4a86be650a7d45f7d501d49df071
+
 
         } else {
             if (document.getElementById('check-3').checked == false) {
