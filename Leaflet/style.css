@@ -14,3 +14,14 @@ body {
     height: 100%;
     position: relative;
 }
+
+#filter {
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+#planeButtons {
+    text-align: center;
+    background-color: whitesmoke;
+    display: none;
+}
