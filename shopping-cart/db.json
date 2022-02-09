@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "prodTitle": "Crypto Wallet",
+      "description": "Super Secure",
+      "price": 99.99
+    },
+    {
+      "prodTitle": "Demo Wallet",
+      "description": "Not Secure",
+      "price": 0.99
+    },
+    {
+      "prodTitle": "Wallet",
+      "description": "Secure",
+      "price": 19.99
+    },
+    {
+      "prodTitle": "No Wallet",
+      "description": "Cant find my wallet",
+      "price": 0.01
+    },
+    {
+      "prodTitle": "Red Wallet",
+      "description": "FULL OF MONEY",
+      "price": 199.99
+    }
+  ]
+}
