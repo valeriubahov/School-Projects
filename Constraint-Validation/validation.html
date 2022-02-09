@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            background-color: darkgray;
+            height: 250px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: top;
+            font-size: calc(10px + 2vmin);
+            color: white;
+            width: 80%;
+        }
+
+        input:valid {
+            border: 3px solid green;
+        }
+
+        input:invalid {
+            border: 3px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+
+        <input type="text" name="username" id="username" required pattern="val" />
+
+        <input type="email" name="email" id="email" required pattern="^.*@nscc.ca*$" title="Insert your NSCC email" />
+        <input type="password" name="pwd" id="pwd">
+        <input type="date" name="date" id="date">
+        <input type="number" name="age" id="age" min="18" max="200" step=".1">
+
+        <button id="submit">Submit</button>
+    </form>
+    <script>
+
+
+        const userInput = document.querySelector('#username');
+        const email = document.querySelector('#email');
+
+        email.addEventListener('invalid', () => {
+            if (email.validity.patternMismatch) {
+                email.setCustomValidity("We accept only NSCC email");
+            }
+        });
+
+        email.addEventListener('input', (ev) => {
+            email.setCustomValidity("");
+        });
+
+        userInput.addEventListener('invalid', () => {
+            if (userInput.validity.valueMissing) {
+                userInput.setCustomValidity("Please insert a value");
+            }
+            else if (userInput.validity.patternMismatch) {
+                userInput.setCustomValidity("The user is not correct");
+            }
+        });
+
+        userInput.addEventListener('input', (ev) => {
+            userInput.setCustomValidity("");
+        });
+    </script>
+</body>
+
+</html>
